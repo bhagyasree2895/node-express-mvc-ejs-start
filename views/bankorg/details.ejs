@@ -1,0 +1,26 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+
+      <h2>bank organisation details</h2>
+      <br>
+      <br> ID: <%=  bankorg._id %>
+      <br> Email: <%=bankorg.email%>
+      <br> Name: <%=bankorg.name%>
+      <br> Street 1: <%=bankorg.street1%>
+      <br> Street 2: <%=bankorg.street2 %>
+      <br> City: <%=bankorg.city %>
+      <br> State: <%=bankorg.state %>
+      <br> Zip: <%=bankorg.zip %>
+      <br> Country: <%=bankorg.country %>
+      <hr>
+
+      <form method="get" action="/bankorg">
+        <input type="submit" value="Return to list" class="btn btn-caution" />
+      </form>
+
+    </div>
+  </div>
+</div>

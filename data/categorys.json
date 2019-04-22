@@ -1,0 +1,26 @@
+[
+  {
+    "_id": 1001,
+    "categoryID": 101,
+    "categoryName": "On-line"
+    
+  },
+  {
+    "_id": 1002,
+    "categoryID": 102,
+    "categoryName": "In-Bank"
+    
+  },
+  {
+    "_id": 1003,
+    "categoryID": 103,
+    "categoryName": "On-line"
+    
+  },
+  {
+    "_id": 1004,
+    "categoryID": 104,
+    "categoryName": "In-Bank"
+    
+  }
+]

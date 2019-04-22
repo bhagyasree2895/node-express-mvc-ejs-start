@@ -1,0 +1,45 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+      <a href="bankorg/create" class="btn btn-primary new">
+        Create a new bank organisation
+      </a>
+
+      <h2>Recent entries</h2>
+      <p>There are
+        <%= bankorgs.query.length %> bank organisation.
+        <br>
+      </p>
+      <% for (var i = bankorgs.query.length-1; i >= 0; i--) {   
+        bankorg = bankorgs.query[i];   %>
+
+      <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="text-muted pull-right"></div>
+        <div class="panel-body">
+
+          <br> ID: <%=  bankorg._id %>
+          <br> Email: <%=bankorg.email%>
+          <br> Name: <%=bankorg.name%>
+          <br> Street 1: <%=bankorg.street1%>
+          <br> Street 2: <%=bankorg.street2 %>
+          <br> City: <%=bankorg.city %>
+          <br> State: <%=bankorg.state %>
+          <br> Zip: <%=bankorg.zip %>
+          <br> Country: <%=bankorg.country %>
+
+          <hr>
+          <a href="/bankorg/delete/<%= bankorg._id  %>" class="btn btn-danger"> Delete </a>
+          <a href="/bankorg/details/<%= bankorg._id %>" class="btn btn-info"> Details </a>
+          <a href="/bankorg/edit/<%= bankorg._id %>" class="btn btn-primary"> Edit </a>
+          <hr>
+          <hr>
+        </div>
+      </div>
+      <% } %>
+
+    </div>
+  </div>
+</div>

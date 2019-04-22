@@ -1,0 +1,46 @@
+[
+  {
+    "_id": 1,
+    "email": "usbank@nwmissouri.edu",
+    "name": "usbank",
+    "street1": "800 University Drive",
+    "street2": "",
+    "city": "Maryville",
+    "state": "MO",
+    "zip": 64468,
+    "country": "USA"
+  },
+  {
+    "_id": 2,
+    "email": "boa@nwmissouri.edu",
+    "name": "Bank Of America",
+    "street1": "800 University Drive",
+    "street2": "",
+    "city": "Maryville",
+    "state": "MO",
+    "zip": 64468,
+    "country": "USA"
+  },
+  {
+    "_id": 3,
+    "email": "yes@nwmissouri.edu",
+    "name": "yesbank",
+    "street1": "800 University Drive",
+    "street2": "",
+    "city": "Maryville",
+    "state": "MO",
+    "zip": 64468,
+    "country": "USA"
+  },
+  {
+    "_id": 4,
+    "email": "hdfc@nwmissouri.edu",
+    "name": "hdfc bank",
+    "street1": "800 University Drive",
+    "street2": "",
+    "city": "Maryville",
+    "state": "MO",
+    "zip": 64468,
+    "country": "USA"
+  }
+]

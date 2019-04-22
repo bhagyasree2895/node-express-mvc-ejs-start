@@ -1,0 +1,26 @@
+[
+  {
+    "_id": 201,
+    "transactionDate":"2018-7-01",
+    "transactionType": "deposit",
+    "transactionAmount": 30.00 
+  },
+  {
+    "_id": 202,
+    "transactionDate":"2018-7-03",
+    "transactionType": "withdraw",
+    "transactionAmount": 10 
+  },
+  {
+    "_id": 203,
+    "transactionDate":"2018-7-11",
+    "transactionType": "deposit",
+    "transactionAmount": 30.00 
+  },
+  {
+    "_id": 204,
+    "transactionDate":"2018-7-21",
+    "transactionType": "withdraw",
+    "transactionAmount": 10 
+  }
+]

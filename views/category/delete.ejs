@@ -1,0 +1,24 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+
+      <h2>Confirm deletion of category</h2>
+      <br>
+      <br> ID: <%=  category._id %>
+      <br> categoryID: <%=category.categoryID%>
+      <br> categoryName: <%=category.categoryName%>
+      <hr>
+      
+      <form method="get" action="/category">
+        <input type="submit" value="Return to list" class="btn btn-caution" />
+      </form>
+
+      <form method="POST" action="/category/delete/<%= category._id %>">
+        <input type="submit" value="Delete this item" class="btn btn-danger pull-right" />
+      </form>
+
+    </div>
+  </div>
+</div>

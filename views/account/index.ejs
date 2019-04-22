@@ -1,0 +1,41 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+      <a href="account/create" class="btn btn-primary new">
+        Create a new account
+      </a>
+
+      <h2>Recent entries</h2>
+      <p>There are
+        <%= accounts.query.length %> accounts.
+        <br>
+      </p>
+      <% for (var i = accounts.query.length-1; i >= 0; i--) {   
+        account = accounts.query[i];   %>
+
+      <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="text-muted pull-right"></div>
+        <div class="panel-body">
+
+          <br> ID: <%=  account._id %>
+          <br> Account Id: <%=account.accountId%>
+          <br> Name: <%=account.name%>
+          <br> Account Created: <%=account.accountCreated%>
+          <br> Account Type: <%=account.accountType%>
+
+          <hr>
+          <a href="/account/delete/<%= account._id  %>" class="btn btn-danger"> Delete </a>
+          <a href="/account/details/<%= account._id %>" class="btn btn-info"> Details </a>
+          <a href="/account/edit/<%= account._id %>" class="btn btn-primary"> Edit </a>
+          <hr>
+          <hr>
+        </div>
+      </div>
+      <% } %>
+
+    </div>
+  </div>
+</div>

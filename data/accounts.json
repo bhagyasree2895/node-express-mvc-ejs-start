@@ -1,0 +1,31 @@
+[
+  {
+    "_id": 101,
+    "accountId": 111,
+    "name": "meghna",
+    "accountCreated": "2018-7-01",
+    "accountType": "current"
+  },
+  {
+    "_id": 102,
+    "accountId": 222,
+    "name": "sowmya",
+    "accountCreated": "2018-9-01",
+    "accountType": "savings"
+  },
+  {
+    "_id": 103,
+    "accountId": 333,
+    "name": "Bhagya",
+    "accountCreated": "2018-7-09",
+    "accountType": "current"
+  },
+  {
+    "_id": 104,
+    "accountId": 444,
+    "name": "Venky",
+    "accountCreated": "2018-9-11",
+    "accountType": "savings"
+  }
+  
+]

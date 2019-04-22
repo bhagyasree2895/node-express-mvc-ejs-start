@@ -1,0 +1,42 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+
+      <h2>Create a new account </h2>
+      <br>
+      <% 
+      maxID=0; 
+      for (var i=0; i < accounts.query.length; i++) {
+        if(accounts.query[i]._id > maxID) { 
+          maxID=accounts.query[i]._id;  
+        }
+      }
+      %>
+      <div class="content">
+        <div>
+          <form name="account" method="POST" action="/account/save">
+
+            <div class="form-group" id=frm>
+              <label for="_id">ID</label>
+              <input type="number" class="form-control" id="_id" name="_id" value="<%= maxID+1 %>" required readonly>
+            </div>
+
+            <!-- COMMON TO EDIT AND CREATE -->
+            <%include partial_edit.ejs%>
+
+            <div class="form-group">
+              <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+          </form>
+
+          <form method="get" action="/account">
+            <input type="submit" value="Return to list" class="btn btn-caution" />
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

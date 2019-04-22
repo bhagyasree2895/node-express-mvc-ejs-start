@@ -1,0 +1,37 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+      <a href="category/create" class="btn btn-primary new">
+        Create a new category
+      </a>
+
+      <h2>Recent entries</h2>
+      <p>There are
+        <%= categorys.query.length %> categorys.
+        <br>
+      </p>
+      <% for (var i = categorys.query.length-1; i >= 0; i--) {   
+        category = categorys.query[i];   %>
+      <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="text-muted pull-right"></div>
+        <div class="panel-body">
+
+          <br> ID: <%=  category._id %>
+          <br> categoryID: <%=category.categoryID%>
+          <br> categoryName: <%=category.categoryName%>
+          <hr>
+          <a href="/category/delete/<%= category._id  %>" class="btn btn-danger"> Delete </a>
+          <a href="/category/details/<%= category._id %>" class="btn btn-info"> Details </a>
+          <a href="/category/edit/<%= category._id %>" class="btn btn-primary"> Edit </a>
+          <hr>
+          <hr>
+        </div>
+      </div>
+      <% } %>
+
+    </div>
+  </div>
+</div>
