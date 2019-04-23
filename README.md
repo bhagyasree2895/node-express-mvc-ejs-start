@@ -8,7 +8,7 @@ This app describes the developing and working of Banking Models.
 
 - Bhagya Sree Chanda(Account Developer)[Introduction Blog](https://bhagyasree2895.github.io/aboutme/)
 - Venkatesh kunduru(Bank Org Developer)[Introduction Blog](https://venkateshkunduru123.github.io/aboutme/)
-- Meghna Reddy Kunt(Transaction Developer)[Introduction Blog](https://meghnareddykunta.github.io/aboutme/)
+- Meghna Reddy Kunta(Transaction Developer)[Introduction Blog](https://meghnareddykunta.github.io/aboutme/)
 - Sowmya Reddy Kumbham(Category Developer)[Introduction Blog](https://sowmyareddy97.github.io/aboutme/)
 
 
