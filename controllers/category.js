@@ -17,87 +17,76 @@ const notfoundstring = 'category not found'
 
 // GET all JSON
 api.get('/findall', (req, res) => {
-  res.setHeader('Content-Type', 'application/json')
-  const data = req.app.locals.categorys.query
-  res.send(JSON.stringify(data))
+  LOG.info(`Handling /findall ${req}`)
+  Model.find({}, (err, data) => {
+    res.json(data)
+  })
 })
 
 // GET one JSON by ID
 api.get('/findone/:id', (req, res) => {
-  res.setHeader('Content-Type', 'application/json')
+  LOG.info(`Handling /findone ${req}`)
   const id = parseInt(req.params.id)
-  const data = req.app.locals.categorys.query
-  const item = find(data, { _id: id })
-  if (!item) { return res.end(notfoundstring) }
-  res.send(JSON.stringify(item))
+  Model.find({ _id: id }, (err, results) => {
+    if (err) { return res.end(notfoundstring) }
+    res.json(results[0])
+  })
 })
 
 // RESPOND WITH VIEWS  --------------------------------------------
 
 // GET to this controller base URI (the default)
 api.get('/', (req, res) => {
-  res.render('category/index.ejs')
+  Model.find({},(err,data) => {
+    res.locals.categorys = data
+    res.render('category/index.ejs')
+  })
 })
 
 // GET create
 api.get('/create', (req, res) => {
-  LOG.info(`Handling GET /create${req}`)
-  const item = new Model()
-  LOG.debug(JSON.stringify(item))
-  res.render('category/create',
-    {
-      title: 'Create category',
-      layout: 'layout.ejs',
-      category: item
-    })
+  LOG.info(`Handling GET /create ${req}`)
+  Model.find({}, (err, data) => {
+    res.locals.categorys = data
+    res.locals.category = new Model()
+    res.render('category/create')
+  })
 })
 
 // GET /delete/:id
 api.get('/delete/:id', (req, res) => {
   LOG.info(`Handling GET /delete/:id ${req}`)
   const id = parseInt(req.params.id)
-  const data = req.app.locals.categorys.query
-  const item = find(data, { _id: id })
-  if (!item) { return res.end(notfoundstring) }
-  LOG.info(`RETURNING VIEW FOR ${JSON.stringify(item)}`)
-  return res.render('category/delete.ejs',
-    {
-      title: 'Delete category',
-      layout: 'layout.ejs',
-      category: item
-    })
+  Model.find({ _id: id }, (err, results) => {
+    if (err) { return res.end(notfoundstring) }
+    LOG.info(`RETURNING VIEW FOR ${JSON.stringify(results)}`)
+    res.locals.category = results[0]
+    return res.render('category/delete.ejs')
+  })
 })
 
 // GET /details/:id
 api.get('/details/:id', (req, res) => {
   LOG.info(`Handling GET /details/:id ${req}`)
   const id = parseInt(req.params.id)
-  const data = req.app.locals.categorys.query
-  const item = find(data, { _id: id })
-  if (!item) { return res.end(notfoundstring) }
-  LOG.info(`RETURNING VIEW FOR ${JSON.stringify(item)}`)
-  return res.render('category/details.ejs',
-    {
-      title: 'category Details',
-      layout: 'layout.ejs',
-      category: item
-    })
+  Model.find({ _id: id }, (err, results) => {
+    if (err) { return res.end(notfoundstring) }
+    LOG.info(`RETURNING VIEW FOR ${JSON.stringify(results)}`)
+    res.locals.category = results[0]
+    return res.render('category/details.ejs')
+  })
 })
 
-// GET /edit/:id
+// GET one
 api.get('/edit/:id', (req, res) => {
   LOG.info(`Handling GET /edit/:id ${req}`)
   const id = parseInt(req.params.id)
-  const data = req.app.locals.categorys.query
-  const item = find(data, { _id: id })
-  if (!item) { return res.end(notfoundstring) }
-  LOG.info(`RETURNING VIEW FOR ${JSON.stringify(item)}`)
-  return res.render('category/edit.ejs',
-    {
-      title: 'categorys',
-      layout: 'layout.ejs',
-      category: item
-    })
+  Model.find({ _id: id }, (err, results) => {
+    if (err) { return res.end(notfoundstring) }
+    LOG.info(`RETURNING VIEW FOR${JSON.stringify(results)}`)
+    res.locals.category = results[0]
+    return res.render('category/edit.ejs')
+  })
 })
 
 // HANDLE EXECUTE DATA MODIFICATION REQUESTS --------------------------------------------
