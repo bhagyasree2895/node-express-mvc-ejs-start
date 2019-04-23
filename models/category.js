@@ -10,7 +10,7 @@
 const mongoose = require('mongoose')
 
 const CategorySchema = new mongoose.Schema({
-  _id: { type: Number, required: true },
+  _id: { type: Number, required: true},
   categoryID: { type: Number, required: true },
   categoryName: { type: String, required: true, default: 'NA' }
 })
