@@ -8,9 +8,9 @@
       <br>
       <% 
       maxID=0; 
-      for (var i=0; i < categorys.query.length; i++) {
-        if(categorys.query[i]._id > maxID) { 
-          maxID=categorys.query[i]._id;  
+      for (var i=0; i < categorys.length; i++) {
+        if(categorys[i]._id > maxID) { 
+          maxID=categorys[i]._id;  
         }
       }
       %>

@@ -9,11 +9,11 @@
 
       <h2>Recent entries</h2>
       <p>There are
-        <%= transactions.query.length %> transactions.
+        <%= transactions.length %> transactions.
         <br>
       </p>
-      <% for (var i = transactions.query.length-1; i >= 0; i--) {   
-        transaction = transactions.query[i];   %>
+      <% for (var i = transactions.length-1; i >= 0; i--) {   
+        transaction = transactions[i];   %>
 
       <div class="panel panel-default">
         <div class="panel-heading"></div>

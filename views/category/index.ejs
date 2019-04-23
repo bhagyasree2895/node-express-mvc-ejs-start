@@ -9,11 +9,11 @@
 
       <h2>Recent entries</h2>
       <p>There are
-        <%= categorys.query.length %> categorys.
+        <%= categorys.length %> categorys.
         <br>
       </p>
-      <% for (var i = categorys.query.length-1; i >= 0; i--) {   
-        category = categorys.query[i];   %>
+      <% for (var i = categorys.length-1; i >= 0; i--) {   
+        category = categorys[i];   %>
       <div class="panel panel-default">
         <div class="panel-heading"></div>
         <div class="text-muted pull-right"></div>
