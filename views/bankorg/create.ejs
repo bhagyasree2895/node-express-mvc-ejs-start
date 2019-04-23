@@ -8,9 +8,9 @@
       <br>
       <% 
       maxID=0; 
-      for (var i=0; i < bankorgs.query.length; i++) {
-        if(bankorgs.query[i]._id > maxID) { 
-          maxID=bankorgs.query[i]._id;  
+      for (var i=0; i < bankorgs.length; i++) {
+        if(bankorgs[i]._id > maxID) { 
+          maxID=bankorgs[i]._id;  
         }
       }
       %>
